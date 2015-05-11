@@ -2,7 +2,8 @@
 function sacarfoto(){
 
 	navigator.camera.getPicture(onSuccess, onFail, {
-	 quality: 50, destinationType: Camera.DestinationType.FILE_URI //opciones qu se escrien en formato json.
+	 quality: 50, destinationType: Camera.DestinationType.DATA_URL //opciones qu se escrien en formato json. Si yo necesito guardar foto no le tengo q poner
+	 //dataurl sino file Uri
 	 });
 
 	function onSuccess(imageData) {  // tiene todos los datos en base 64 de la iamgen-
